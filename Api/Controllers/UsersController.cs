@@ -78,7 +78,8 @@ namespace Api.Controllers
                 return NotFound();
             }
 
-            return Ok(_repository.User.Delete(userToRemove));
+            bool deleted = _repository.User.Delete(userToRemove);
+            return Ok(deleted);
         }
 
         [HttpPost]

@@ -71,19 +71,6 @@ namespace Api.Tests
         }
 
         [TestMethod]
-        public void Create_New_Invalid_Address()
-        {
-            var controller = new AddressesController(_repository);
-            var address = new Address()
-            {
-                Description = "Rua Bahia, 3422, Passo Manso, Blumenau/SC",
-            };
-
-            var response = controller.Post(address);
-            Assert.IsInstanceOfType(response.Result, typeof(BadRequestObjectResult));
-        }
-
-        [TestMethod]
         public void Update_Valid_Address()
         {
             const string updatedValue = "Address Updated!!";

@@ -13,7 +13,7 @@ namespace Api.Tests
             var controller = new ProductsController(_repository);
             var result = controller.Get().ToList();
 
-            Assert.IsTrue(result.Count == 2);
+            Assert.IsTrue(result.Count == 3);
         }
 
         [TestInitialize]

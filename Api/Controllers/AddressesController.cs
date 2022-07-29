@@ -41,7 +41,8 @@ namespace Api.Controllers
         {
             try 
             {
-                return Ok(_repository.Address.Create(address));
+                _repository.Address.Create(address);
+                return Ok(address);
             }
             catch(Exception ex)
             {
@@ -54,7 +55,8 @@ namespace Api.Controllers
         {
             try
             {
-                return Ok(_repository.Address.Update(address));
+                _repository.Address.Update(address);
+                return Ok(address);
             }
             catch (Exception ex)
             {
@@ -72,7 +74,8 @@ namespace Api.Controllers
                 return NotFound();
             }
 
-            return Ok(_repository.Address.Delete(addressToRemove));
+            bool deleted = _repository.Address.Delete(addressToRemove);
+            return Ok(deleted);
         }
     }
 }

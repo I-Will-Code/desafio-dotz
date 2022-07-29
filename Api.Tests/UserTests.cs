@@ -123,29 +123,5 @@ namespace Api.Tests
             var response = controller.PutUser(user);
             Assert.IsInstanceOfType(response.Result, typeof(BadRequestObjectResult));
         }
-
-        [TestMethod]
-        public void Get_Score_Balance()
-        {
-            /*const int userId = 1;
-            var controller = new UsersController(_repository);
-            var response = controller.GetScoreBalance(userId);
-            var responseObject = (response.Result as OkObjectResult).Value as Score;
-            
-            Assert.IsInstanceOfType(response.Result, typeof(OkObjectResult));
-            Assert.AreEqual(responseObject.Total, 300);*/
-        }
-
-        [TestMethod]
-        public void Get_Score_Extract()
-        {
-            /*const int userId = 1;
-            var controller = new UsersController(_repository);
-            var response = controller.GetScoreExtract(userId);
-            var responseObject = (response.Result as OkObjectResult).Value as ScoreExtract;
-
-            Assert.IsInstanceOfType(response.Result, typeof(OkObjectResult));
-            //Assert.AreEqual(responseObject.Total, 300);*/
-        }
     }
 }

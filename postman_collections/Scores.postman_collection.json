@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "8e0c171e-fd97-408c-aa56-33d454065f8d",
+		"name": "Scores",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4535180"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2lsbGlhbWYud2VybGluZ0BnbWFpbC5jb20iLCJuYmYiOjE2NTkwOTMxMDUsImV4cCI6MTY1OTEwMDMwNSwiaWF0IjoxNjU5MDkzMTA1fQ.m_zZcY5z4loOR5AtLyk40Zpwym35pHeE372yr-lHCVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Total\": 8800,\r\n    \"UserId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_BASE}}scores",
+					"host": [
+						"{{URL_BASE}}scores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2lsbGlhbWYud2VybGluZ0BnbWFpbC5jb20iLCJuYmYiOjE2NTkwOTMxMDUsImV4cCI6MTY1OTEwMDMwNSwiaWF0IjoxNjU5MDkzMTA1fQ.m_zZcY5z4loOR5AtLyk40Zpwym35pHeE372yr-lHCVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 11,\r\n    \"total\": 8900,\r\n    \"userId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_BASE}}scores",
+					"host": [
+						"{{URL_BASE}}scores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2lsbGlhbWYud2VybGluZ0BnbWFpbC5jb20iLCJuYmYiOjE2NTkwOTMxMDUsImV4cCI6MTY1OTEwMDMwNSwiaWF0IjoxNjU5MDkzMTA1fQ.m_zZcY5z4loOR5AtLyk40Zpwym35pHeE372yr-lHCVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_BASE}}scores/2",
+					"host": [
+						"{{URL_BASE}}scores"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

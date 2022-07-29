@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "1f829bb4-f001-42ce-b3de-ae3d3cac6389",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4535180"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2lsbGlhbWYud2VybGluZ0BnbWFpbC5jb20iLCJuYmYiOjE2NTkwOTMxMDUsImV4cCI6MTY1OTEwMDMwNSwiaWF0IjoxNjU5MDkzMTA1fQ.m_zZcY5z4loOR5AtLyk40Zpwym35pHeE372yr-lHCVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL_BASE}}orders/1",
+					"host": [
+						"{{URL_BASE}}orders"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2lsbGlhbWYud2VybGluZ0BnbWFpbC5jb20iLCJuYmYiOjE2NTkwOTMxMDUsImV4cCI6MTY1OTEwMDMwNSwiaWF0IjoxNjU5MDkzMTA1fQ.m_zZcY5z4loOR5AtLyk40Zpwym35pHeE372yr-lHCVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"delivered\": true,\r\n    \"userId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_BASE}}orders",
+					"host": [
+						"{{URL_BASE}}orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoid2lsbGlhbWYud2VybGluZ0BnbWFpbC5jb20iLCJuYmYiOjE2NTkwOTMxMDUsImV4cCI6MTY1OTEwMDMwNSwiaWF0IjoxNjU5MDkzMTA1fQ.m_zZcY5z4loOR5AtLyk40Zpwym35pHeE372yr-lHCVE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"Delivered\": false,\r\n    \"UserId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_BASE}}orders",
+					"host": [
+						"{{URL_BASE}}orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
