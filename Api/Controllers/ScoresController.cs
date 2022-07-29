@@ -7,6 +7,7 @@ namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ScoresController : ControllerBase
     {
         private IRepositoryWrapper _repository;
@@ -49,18 +50,5 @@ namespace Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-        [HttpGet("balance/{userid}")]
-        [Authorize]
-        public ActionResult<Score> GetScoreBalance(long userid)
-        {
-            return Ok(_repository.Score.FindByCondition(cond => cond.User.Id == userid).FirstOrDefault());
-        }
-
-        [HttpGet("extract/{userid}")]
-        [Authorize]
-        public ActionResult<ScoreExtract> GetScoreExtract(long userid)
-        {
-            return Ok();
-        }
-    }}
+    }
+}
